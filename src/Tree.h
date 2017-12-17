@@ -29,11 +29,11 @@ private:
 
     friend void tostring(const nodePtr&, int, std::stringstream&);
 
-    nodePtr sink(int, std::pair<size_t, size_t>, const std::string&);
-    
+    static nodePtr sink(int, std::pair<size_t, size_t>, const std::string&);
+
 public:
     explicit Tree(nodePtr node = nullptr) : t(std::move(node)) {}
-    explicit Tree(std::string str) : Tree() {  t = from_string(std::move(str)); }
+    explicit Tree(std::string str) : t(from_string(std::move(str))) {}
 
     explicit Tree(const Tree&) = delete;
     Tree& operator=(const Tree&) = delete;
@@ -54,7 +54,7 @@ public:
         return ss.str();
     }
 
-    nodePtr from_string(std::string&&);
+    static nodePtr from_string(std::string&&);
 };
 
 

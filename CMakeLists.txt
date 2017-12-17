@@ -13,7 +13,7 @@ if ($ENV{TRAVIS}) # On Travis-CI add coverage ability and disable optimizations
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -coverage")
     set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 else () # Enable lvl2 optimizations else
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2")
 endif ()
 
 enable_testing()
