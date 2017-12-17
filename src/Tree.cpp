@@ -4,6 +4,7 @@
 
 #include "Tree.h"
 #include <iostream>
+#include <algorithm>
 
 
 std::pair<char, char> brackets[3]{{'{', '}'},
